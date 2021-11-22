@@ -50,7 +50,7 @@ function draw() {
 
     car.velocityY = car.velocityY + 0.3;
 
-if(ground.isTouching(car) || obstacleCar.isTouching(car)){
+if(ground.isTouching(car)){
      gameState = "end"
    }
 
