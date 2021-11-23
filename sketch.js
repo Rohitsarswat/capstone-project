@@ -56,7 +56,8 @@ if(ground.isTouching(car)){
    }
 
   if(obstacleCarGroup.isTouching(car)){
-    ghost.velocityY = 0;
+    car.velocityY = 0;
+    gameState = "end"
   }
     
     
@@ -73,12 +74,13 @@ if(ground.isTouching(car)){
 }
 
 function spawnCars(){
-  if(frameCount % 250 == 0){
+  if(frameCount % 60 == 0){
     var obstacleCar = createSprite(Math.round(random(120,width-100)),10)
     obstacleCar.addImage(obstacleCarImg)
     obstacleCar.velocityY = 1;
     obstacleCar.lifetime = height/1;
     obstacleCarGroup.add(obstacleCar)
+    obstacleCar.scale = 0.2
   }
 }
 
