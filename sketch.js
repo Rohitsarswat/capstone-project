@@ -47,6 +47,7 @@ function draw() {
       if(keyDown("right")){
         car.x+=25
       }
+    spawnCars();
 
     car.velocityY = car.velocityY + 0.3;
 
