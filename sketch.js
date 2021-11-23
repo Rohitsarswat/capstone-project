@@ -41,11 +41,11 @@ function draw() {
       }
 
       if(keyDown("left")){
-        car.x-=25
+        car.x-=10
       }
 
       if(keyDown("right")){
-        car.x+=25
+        car.x+=10
       }
     spawnCars();
 
